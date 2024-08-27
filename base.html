@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<base href="{{{base || prefix + '/'}}}" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>{{{title}}}</title>
+	<meta itemprop="name" content="{{{title}}}" />
+	<meta name="twitter:title" content="{{{title}}}" />
+	<meta property="og:title" content="{{{title}}}" />
+
+	<meta name="description" content="{{{description}}}" />
+	<meta itemprop="description" content="{{{description}}}" />
+	<meta name="twitter:description" content="{{{description}}}" />
+	<meta property="og:description" content="{{{description}}}" />
+
+	<meta itemprop="image" content="{{{image}}}" />
+	<meta name="twitter:image:src" content="{{{image}}}" />
+	<meta property="og:image" content="{{{image}}}" />
+
+	<link rel="icon" type="image/x-icon" href="{{{favicon}}}" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/index.css" />
+</head>
+
+<body>
+	<header class="header">
+		<span class="header__left">
+			<a href="/" class="header__logo-link">
+				<img src="img/logo.svg" alt="WAW" width="45" class="header__logo" />
+			</a>
+			<h1 class="header__title">Wjst</h1>
+		</span>
+		<span class="header__right">
+			<ul class="header__nav">
+				<li class="header__nav-item">
+					<a href="/documentations" class="header__nav-link">Documentations</a>
+				</li>
+			</ul>
+
+			<ul class="header__nav">
+				<li class="header__nav-item">
+					<a href="https://github.com/WebArtWork/wjst" target="_blank" data-original-title="GitHub"
+						class="header__nav-link header__nav-link--github">
+						<img src="img/github.svg" alt="github" class="header__nav-icon">
+					</a>
+				</li>
+			</ul>
+
+			<span class="header__nav header__nav--mobile material-icons"
+				onclick="toggleClass('sidebar', 'main-content__nav--show')">menu</span>
+		</span>
+	</header>
+	<main class="main-content">
+		<nav id="sidebar" class="main-content__nav">
+			<ul>
+				<li class="main-content__nav-item main-content__nav-item--mobile">
+					<a href="/documentations" class="header__nav-link">Documentations</a>
+				</li>
+				<li class="main-content__nav-item">
+					<a href="/documentations2" class="main-content__nav-link">Getting started</a>
+				</li>
+				<li class="main-content__nav-item">
+					<a href="/documentations2" class="main-content__nav-link">Customize</a>
+					<ul class="main-content__nav-in">
+						<li class="main-content__nav-in-item">
+							<a href="/#typography" class="main-content__nav-link">Sass</a>
+						</li>
+						<li class="main-content__nav-in-item">
+							<a href="/#typography" class="main-content__nav-link">CSS Variables</a>
+						</li>
+						<li class="main-content__nav-in-item">
+							<a href="/#typography" class="main-content__nav-link">Template Variables</a>
+						</li>
+						<li class="main-content__nav-in-item">
+							<a href="/#typography" class="main-content__nav-link">Optimize</a>
+						</li>
+					</ul>
+				</li>
+				<li class="main-content__nav-item">
+					<a href="/documentations2" class="main-content__nav-link">Layout</a>
+					<ul class="main-content__nav-in">
+						<li class="main-content__nav-in-item">
+							<a href="/#typography" class="main-content__nav-link">Breakpoints</a>
+						</li>
+						<li class="main-content__nav-in-item">
+							<a href="/#typography" class="main-content__nav-link">Containers</a>
+						</li>
+						<li class="main-content__nav-in-item">
+							<a href="/#typography" class="main-content__nav-link">Grid</a>
+						</li>
+						<li class="main-content__nav-in-item">
+							<a href="/#typography" class="main-content__nav-link">Columns</a>
+						</li>
+					</ul>
+				</li>
+				<li class="main-content__nav-item">
+					<a href="/documentations2" class="main-content__nav-link">Content</a>
+					<ul class="main-content__nav-in">
+						<li class="main-content__nav-in-item">
+							<a href="/#typography" class="main-content__nav-link">Typography</a>
+						</li>
+						<li class="main-content__nav-in-item">
+							<a href="/#typography" class="main-content__nav-link">Images</a>
+						</li>
+						<li class="main-content__nav-in-item">
+							<a href="/#typography" class="main-content__nav-link">Tables</a>
+						</li>
+					</ul>
+				</li>
+				<li class="main-content__nav-item">
+					<a href="/documentations2" class="main-content__nav-link">Components</a>
+					<ul class="main-content__nav-in">
+						<li class="main-content__nav-in-item">
+							<a href="/#typography" class="main-content__nav-link">Alerts</a>
+						</li>
+						<li class="main-content__nav-in-item">
+							<a href="/#typography" class="main-content__nav-link">Breadcrumb</a>
+						</li>
+						<li class="main-content__nav-in-item">
+							<a href="/#typography" class="main-content__nav-link">Buttons</a>
+						</li>
+						<li class="main-content__nav-in-item">
+							<a href="/#typography" class="main-content__nav-link">Collapse</a>
+						</li>
+						<li class="main-content__nav-in-item">
+							<a href="/#typography" class="main-content__nav-link">Dropdowns</a>
+						</li>
+						<li class="main-content__nav-in-item">
+							<a href="/#typography" class="main-content__nav-link">Modal</a>
+						</li>
+						<li class="main-content__nav-in-item">
+							<a href="/#typography" class="main-content__nav-link">Navbar</a>
+						</li>
+						<li class="main-content__nav-in-item">
+							<a href="/#typography" class="main-content__nav-link">Pagination</a>
+						</li>
+						<li class="main-content__nav-in-item">
+							<a href="/#typography" class="main-content__nav-link">Popovers</a>
+						</li>
+						<li class="main-content__nav-in-item">
+							<a href="/#typography" class="main-content__nav-link">Progress</a>
+						</li>
+						<li class="main-content__nav-in-item">
+							<a href="/#typography" class="main-content__nav-link">Spinners</a>
+						</li>
+					</ul>
+				</li>
+				<li class="main-content__nav-item">
+					<a href="/documentations2" class="main-content__nav-link">About</a>
+					<ul class="main-content__nav-in">
+						<li class="main-content__nav-in-item">
+							<a href="/#typography" class="main-content__nav-link">Team</a>
+						</li>
+						<li class="main-content__nav-in-item">
+							<a href="/#typography" class="main-content__nav-link">Brand</a>
+						</li>
+						<li class="main-content__nav-in-item">
+							<a href="/#typography" class="main-content__nav-link">License</a>
+						</li>
+					</ul>
+				</li>
+
+
+
+				<!-- should be shown on mobile and web with sub ul -->
+				<li class="main-content__nav-item main-content__nav-item--active">
+					<a href="/documentations2" class="main-content__nav-link">Should be shown highlighted</a>
+					<ul class="main-content__nav-in">
+						<li class="main-content__nav-in-item">
+							<a href="/documentations21" class="main-content__nav-link">Documentations 2 1</a>
+						</li>
+						<li class="main-content__nav-in-item">
+							<a href="/documentations22" class="main-content__nav-link">Documentations 2 2</a>
+						</li>
+					</ul>
+				</li>
+				<!-- should be shown on mobile and web without sub ul -->
+				<li class="main-content__nav-item">
+					<a href="/documentations2" class="main-content__nav-link">Should be shown</a>
+					<ul class="main-content__nav-in--none">
+						<li class="main-content__nav-in-item">
+							<a href="/documentations21" class="main-content__nav-link">Should not be shown</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		<section class="main-content__section">
+			<!-- HTML -->
+		</section>
+	</main>
+	<footer class="footer">
+		<p class="footer__text">
+			<span class="footer__text-part">Wjst is copyright ©2024</span>
+			<a href="https://webart.work" class="footer__link">Web Art Work</a>,
+			<span class="footer__text-part"> licensed for use under the permissive MIT Open Source License.</span>
+		</p>
+	</footer>
+	<script src="js/index.js"></script>
+</body>
+
+</html>

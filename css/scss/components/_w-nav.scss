@@ -1,0 +1,101 @@
+.navbar{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    &-logo{
+        display: flex;
+        align-items: center;
+    }
+    &-form{
+        form{
+            display: flex;
+        }
+    }
+    &-navigation{
+        display: flex;
+        li{
+            margin-right: 30px;
+            &:last-child{
+                margin-right: 0;
+                display: flex;
+                align-items: center;    
+            }
+            a{
+                transition: all .3s;
+                font-size: 20px;
+                &:hover{
+                    color: var(--c-primary-hover);
+                }
+            }
+        }
+        &-dropdawn{
+            position: relative;
+            &:hover{
+                .navbar-navigation-dropdawn__text{
+                    color: var(--c-primary-hover);
+                }
+            }
+            &__text{
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                transition: all .3s;
+            }
+            &__img{
+                display: flex;
+                margin-left: 5px;
+            }
+            .arrow-icon {
+                transition: transform 0.3s ease-in-out; /* Анімація повороту іконки */
+              }
+            &__list{
+                max-height: 0; /* Встановлюємо максимальну висоту в 0 для приховання */
+                overflow: hidden; /* Приховуємо елементи за межами контейнера */
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                transition: max-height 0.3s ease-in-out; /* Анімація плавного переходу висоти */
+                position: absolute;
+                border: 1px solid transparent;
+                transition: all .3s;
+                padding: 5px;
+                border-radius: var(--b-radius);
+                width: 100%;
+                z-index: 99;
+                li{
+                    margin: 0 0 5px 0;
+                }
+            }
+        }
+    }
+    &-form{
+        input{
+            border: 2px solid var(--c-primary-hover);
+            padding: 5px;
+            background-color: transparent;
+            color: var(--c-text-primary);
+            border-radius: var(--b-radius);
+            &::placeholder{
+                color: var(--c-text-primary);
+            }
+        }
+        button{
+            background: var(--c-primary-hover);
+            color: var(--c-primary);
+            padding: 7.5px 20px;
+            transition: all .3s;
+            &:hover{
+                background-color: var(--c-primary-cursor);
+            }
+        }
+    }
+}
+.navbar-navigation-dropdawn.open .navbar-navigation-dropdawn__list {
+    max-height: 100vh; /* Максимальна висота, достатня для показу всього списку */
+    border: 1px solid var(--c-primary-hover);
+    background: var(--c-primary);
+}
+  
+  .navbar-navigation-dropdawn.open .arrow-icon {
+    transform: rotate(180deg); /* Повертаємо іконку */
+  }

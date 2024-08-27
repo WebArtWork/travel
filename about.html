@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<base href="/" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Title which will fit on all pages</title>
+	<meta itemprop="name" content="Title which will fit on all pages" />
+	<meta name="twitter:title" content="Title which will fit on all pages" />
+	<meta property="og:title" content="Title which will fit on all pages" />
+
+	<meta name="description" content="Description which will fit on all pages" />
+	<meta itemprop="description" content="Description which will fit on all pages" />
+	<meta name="twitter:description" content="Description which will fit on all pages" />
+	<meta property="og:description" content="Description which will fit on all pages" />
+
+	<meta itemprop="image" content="https://webartwork.github.io/wjst-default/img/avatar.png" />
+	<meta name="twitter:image:src" content="https://webartwork.github.io/wjst-default/img/avatar.png" />
+	<meta property="og:image" content="https://webartwork.github.io/wjst-default/img/avatar.png" />
+
+	<link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/index.css" />
+</head>
+
+<body>
+	<header class="header">
+		<span class="header__left">
+			<a href="/" class="header__logo-link">
+				<img src="img/logo.svg" alt="WAW" width="45" class="header__logo" />
+			</a>
+			<h1 class="header__title">Wjst</h1>
+		</span>
+		<span class="header__right">
+			<ul class="header__nav">
+				<li class="header__nav-item">
+					<a href="/documentations" class="header__nav-link">Documentations</a>
+				</li>
+			</ul>
+
+			<ul class="header__nav">
+				<li class="header__nav-item">
+					<a href="https://github.com/WebArtWork/wjst" target="_blank" data-original-title="GitHub"
+						class="header__nav-link header__nav-link--github">
+						<img src="img/github.svg" alt="github" class="header__nav-icon">
+					</a>
+				</li>
+			</ul>
+
+			<span class="header__nav header__nav--mobile material-icons"
+				onclick="toggleClass('sidebar', 'main-content__nav--show')">menu</span>
+		</span>
+	</header>
+	<main class="main-content">
+		<nav id="sidebar" class="main-content__nav">
+			<ul>
+				<li class="main-content__nav-item main-content__nav-item--mobile">
+					<a href="/documentations" class="header__nav-link">Documentations</a>
+				</li>
+				<li class="main-content__nav-item">
+					<a href="/documentations2" class="main-content__nav-link">Getting started</a>
+				</li>
+				<li class="main-content__nav-item">
+					<a href="/documentations2" class="main-content__nav-link">Customize</a>
+					<ul class="main-content__nav-in">
+						<li class="main-content__nav-in-item">
+							<a href="/#typography" class="main-content__nav-link">Sass</a>
+						</li>
+						<li class="main-content__nav-in-item">
+							<a href="/#typography" class="main-content__nav-link">CSS Variables</a>
+						</li>
+						<li class="main-content__nav-in-item">
+							<a href="/#typography" class="main-content__nav-link">Template Variables</a>
+						</li>
+						<li class="main-content__nav-in-item">
+							<a href="/#typography" class="main-content__nav-link">Optimize</a>
+						</li>
+					</ul>
+				</li>
+				<li class="main-content__nav-item">
+					<a href="/documentations2" class="main-content__nav-link">Layout</a>
+					<ul class="main-content__nav-in">
+						<li class="main-content__nav-in-item">
+							<a href="/#typography" class="main-content__nav-link">Breakpoints</a>
+						</li>
+						<li class="main-content__nav-in-item">
+							<a href="/#typography" class="main-content__nav-link">Containers</a>
+						</li>
+						<li class="main-content__nav-in-item">
+							<a href="/#typography" class="main-content__nav-link">Grid</a>
+						</li>
+						<li class="main-content__nav-in-item">
+							<a href="/#typography" class="main-content__nav-link">Columns</a>
+						</li>
+					</ul>
+				</li>
+				<li class="main-content__nav-item">
+					<a href="/documentations2" class="main-content__nav-link">Content</a>
+					<ul class="main-content__nav-in">
+						<li class="main-content__nav-in-item">
+							<a href="/#typography" class="main-content__nav-link">Typography</a>
+						</li>
+						<li class="main-content__nav-in-item">
+							<a href="/#typography" class="main-content__nav-link">Images</a>
+						</li>
+						<li class="main-content__nav-in-item">
+							<a href="/#typography" class="main-content__nav-link">Tables</a>
+						</li>
+					</ul>
+				</li>
+				<li class="main-content__nav-item">
+					<a href="/documentations2" class="main-content__nav-link">Components</a>
+					<ul class="main-content__nav-in">
+						<li class="main-content__nav-in-item">
+							<a href="/#typography" class="main-content__nav-link">Alerts</a>
+						</li>
+						<li class="main-content__nav-in-item">
+							<a href="/#typography" class="main-content__nav-link">Breadcrumb</a>
+						</li>
+						<li class="main-content__nav-in-item">
+							<a href="/#typography" class="main-content__nav-link">Buttons</a>
+						</li>
+						<li class="main-content__nav-in-item">
+							<a href="/#typography" class="main-content__nav-link">Collapse</a>
+						</li>
+						<li class="main-content__nav-in-item">
+							<a href="/#typography" class="main-content__nav-link">Dropdowns</a>
+						</li>
+						<li class="main-content__nav-in-item">
+							<a href="/#typography" class="main-content__nav-link">Modal</a>
+						</li>
+						<li class="main-content__nav-in-item">
+							<a href="/#typography" class="main-content__nav-link">Navbar</a>
+						</li>
+						<li class="main-content__nav-in-item">
+							<a href="/#typography" class="main-content__nav-link">Pagination</a>
+						</li>
+						<li class="main-content__nav-in-item">
+							<a href="/#typography" class="main-content__nav-link">Popovers</a>
+						</li>
+						<li class="main-content__nav-in-item">
+							<a href="/#typography" class="main-content__nav-link">Progress</a>
+						</li>
+						<li class="main-content__nav-in-item">
+							<a href="/#typography" class="main-content__nav-link">Spinners</a>
+						</li>
+					</ul>
+				</li>
+				<li class="main-content__nav-item">
+					<a href="/documentations2" class="main-content__nav-link">About</a>
+					<ul class="main-content__nav-in">
+						<li class="main-content__nav-in-item">
+							<a href="/#typography" class="main-content__nav-link">Team</a>
+						</li>
+						<li class="main-content__nav-in-item">
+							<a href="/#typography" class="main-content__nav-link">Brand</a>
+						</li>
+						<li class="main-content__nav-in-item">
+							<a href="/#typography" class="main-content__nav-link">License</a>
+						</li>
+					</ul>
+				</li>
+
+
+
+				<!-- should be shown on mobile and web with sub ul -->
+				<li class="main-content__nav-item main-content__nav-item--active">
+					<a href="/documentations2" class="main-content__nav-link">Should be shown highlighted</a>
+					<ul class="main-content__nav-in">
+						<li class="main-content__nav-in-item">
+							<a href="/documentations21" class="main-content__nav-link">Documentations 2 1</a>
+						</li>
+						<li class="main-content__nav-in-item">
+							<a href="/documentations22" class="main-content__nav-link">Documentations 2 2</a>
+						</li>
+					</ul>
+				</li>
+				<!-- should be shown on mobile and web without sub ul -->
+				<li class="main-content__nav-item">
+					<a href="/documentations2" class="main-content__nav-link">Should be shown</a>
+					<ul class="main-content__nav-in--none">
+						<li class="main-content__nav-in-item">
+							<a href="/documentations21" class="main-content__nav-link">Should not be shown</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		<section class="main-content__section">
+			<div class="index-readme">
+    <div id="team">
+        <div class="index-readme__title">
+            <h1>Team</h1>
+            <p>An overview of the founding team and core contributors to waw.</p>
+        </div>
+        <p>waw is maintained by a small group of invaluable core contributors, with the massive support and
+            involvement of our community.</p>
+        <p>CEO & Founder</p>
+        <div class="list">
+            <a class="list-group" href="https://github.com/CrackerakiUA">
+                <img src="https://webart.work/api/user/image/63b9245ff9e925059d9ef676.jpg?1685462740871"
+                    alt="@CrackerakiUA" width="32" height="32" loading="lazy">
+                <span>
+                    <strong>Denys Honchar</strong> @CrackerakiUA
+                </span>
+            </a>
+        </div>
+        <p>Co-founders</p>
+        <div class="list">
+            <a class="list-group" href="https://github.com/Kondruk">
+                <img src="https://webart.work/api/user/image/6602d9a0eb28ecc0dbacf3ed.jpg?1711533376634"
+                    alt="@Kondruk" width="32" height="32" loading="lazy">
+                <span>
+                    <strong>Roman Kondruk</strong> @Kondruk
+                </span>
+            </a>
+            <a class="list-group" href="https://webart.work/m/6474b20780f5fe5cf6f21e6f">
+                <img src="https://webart.work/api/user/image/6474b20780f5fe5cf6f21e6f.jpg?1685463694255"
+                    alt="@mia_hadzyra" width="32" height="32" loading="lazy">
+                <span>
+                    <strong>Solomia Hadzyra</strong> @mia_hadzyra
+                </span>
+            </a>
+            <a class="list-group" href="https://github.com/div632">
+                <img src="https://avatars.githubusercontent.com/u/63455695?v=4" alt="@div632" width="32" height="32"
+                    loading="lazy">
+                <span>
+                    <strong>Dina Irikova</strong> @div632
+                </span>
+            </a>
+            <a class="list-group" href="https://github.com/Esmodeo">
+                <img src="https://avatars.githubusercontent.com/u/11319329?v=4" alt="@Esmodeo" width="32"
+                    height="32" loading="lazy">
+                <span>
+                    <strong>Andrew Momot</strong> @Esmodeo
+                </span>
+            </a>
+            <a class="list-group" href="https://github.com/hlushko-arthur">
+                <img src="https://avatars.githubusercontent.com/u/61018089?v=4" alt="@hlushko-arthur" width="32"
+                    height="32" loading="lazy">
+                <span>
+                    <strong>Arthur Hlushko</strong> @hlushko-arthur
+                </span>
+            </a>
+        </div>
+        <p>Active Team</p>
+        <div class="list">
+            <a class="list-group" href="https://github.com/volodkina01">
+                <img src="https://webart.work/api/user/image/666ae070fe74e00ea634c6f5.jpg?1718280491815"
+                    alt="@volodkina01" width="32" height="32" loading="lazy">
+                <span>
+                    <strong>Nadiia Bercha</strong> @volodkina01
+                </span>
+            </a>
+            <a class="list-group" href="https://github.com/nikiquickie">
+                <img src="https://webart.work/api/user/image/64eee5d08eaf76400c6c3063.jpg?1693378151062"
+                    alt="@nikiquickie" width="32" height="32" loading="lazy">
+                <span>
+                    <strong>Nika Rohovska</strong> @nikiquickie
+                </span>
+            </a>
+            <a class="list-group" href="https://github.com/denisN2102">
+                <img src="https://webart.work/api/user/image/65d748355ad774b675a148c0.jpg?1708607959929"
+                    alt="@denisN2102" width="32" height="32" loading="lazy">
+                <span>
+                    <strong>Denys Narolskyi</strong> @denisN2102
+                </span>
+            </a>
+            <a class="list-group" href="https://github.com/Lizvinskyi0202">
+                <img src="img/photo1.jpg" alt="@Lizvinskyi0202" width="32" height="32" loading="lazy">
+                <span>
+                    <strong>Andrii Lizvinskyi</strong> @Lizvinskyi0202
+                </span>
+            </a>
+        </div>
+        <p>Get involved with waw development by <span class="index-readme__code">opening an issue</span> or
+            submitting a pull request.</p>
+    </div>
+
+    <div id="brand">
+        <div class="index-readme__title">
+            <h1>Brand</h1>
+            <p>Documentation and examples for waw’s logo and brand usage guidelines.</p>
+        </div>
+        <p>Have a need for waw’s brand resources? Great! We have only a few guidelines we follow, and in turn ask
+            you to follow as well.</p>
+    </div>
+
+    <div id="logo">
+        <div class="index-readme__title">
+            <h1>Logo</h1>
+        </div>
+        <p>When referencing waw, use our logo mark. Do not modify our logos in any way. Do not use waw’s branding
+            for your own open or closed source projects.</p>
+        <div class="img border">
+            <img class="image" src="img/logo2.jpg" width="300" height="300">
+        </div>
+    </div>
+
+    <div id="name">
+        <div class="index-readme__title">
+            <h1>Name</h1>
+        </div>
+        <p>waw should always be referred to as just waw. No capital w.</p>
+        <div class="example">
+            <div class="text">
+                <div class="left">
+                    <div class="h2 text-waw">waw</div>
+                    <strong class="text-success">Correct</strong>
+                </div>
+                <div class="right">
+                    <div class="h2 text-body-secondary">Waw</div>
+                    <strong class="text-danger">Incorrect</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="license">
+        <div class="index-readme__title">
+            <h1>License FAQs</h1>
+            <p>Commonly asked questions about waw’s open source license.</p>
+        </div>
+        <p>waw is released under the MIT license and is copyright 2024. Boiled down to smaller chunks, it can
+            be described with the following conditions.</p>
+        <div class="index-readme__title">
+            <h1>It requires you to:</h1>
+        </div>
+        <ul class="list-style">
+            <li>Keep the license and copyright notice included in waw’s CSS and JavaScript files when you use
+                them in your works</li>
+        </ul>
+        <div class="index-readme__title">
+            <h1>It permits you to:</h1>
+        </div>
+        <ul class="list-style">
+            <li>Freely download and use waw, in whole or in part, for personal, private, company internal, or
+                commercial purposes</li>
+            <li>Use waw in packages or distributions that you create</li>
+            <li>Modify the source code</li>
+            <li>Grant a sublicense to modify and distribute waw to third parties not included in the license</li>
+        </ul>
+        <div class="index-readme__title">
+            <h1>It forbids you to:</h1>
+        </div>
+        <ul class="list-style">
+            <li>Hold the authors and license owners liable for damages as waw is provided without warranty</li>
+            <li>Hold the creators or copyright holders of waw liable</li>
+            <li>Redistribute any piece of waw without proper attribution</li>
+            <li>Use any marks owned by waw in any way that might state or imply that waw endorses your distribution
+            </li>
+            <li>Use any marks owned by waw in any way that might state or imply that you created the waw software in
+                question</li>
+        </ul>
+        <div class="index-readme__title">
+            <h1>It does not require you to:</h1>
+        </div>
+        <ul class="list-style">
+            <li>Include the source of waw itself, or of any modifications you may have made to it, in any
+                redistribution you may assemble that includes it</li>
+            <li>Submit changes that you make to waw back to the waw project (though such feedback is encouraged)
+            </li>
+        </ul>
+        <p>The full waw license is located <span class="index-readme__code">in the project repository</span> for
+            more information.</p>
+    </div>
+</div>
+		</section>
+	</main>
+	<footer class="footer">
+		<p class="footer__text">
+			<span class="footer__text-part">Wjst is copyright ©2024</span>
+			<a href="https://webart.work" class="footer__link">Web Art Work</a>,
+			<span class="footer__text-part"> licensed for use under the permissive MIT Open Source License.</span>
+		</p>
+	</footer>
+	<script src="js/index.js"></script>
+</body>
+
+</html>
