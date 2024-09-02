@@ -11,7 +11,7 @@ $green: #928907;
 $green-darken: #16a085;
 $red-darken: #581010;
 
-.index {
+/*.index {
 	flex: 1;
 	display: flex;
 	flex-direction: column;
@@ -694,5 +694,89 @@ table {
 
 	.text-danger {
 		color: var(--c-error-hover);
+	}
+}*/
+
+
+.welcome{
+	padding-top: 150px;
+	&__main-title{
+		max-width: fit-content;
+		margin: 0 auto;
+		text-align: center;
+		font-size: 80px;
+		font-weight: 600;
+		line-height: 1.3;
+		position: relative;
+		span{
+			display: block;
+			color: #D4E22D;
+		}
+		&::before{
+			content: "";
+			position: absolute;
+			left: 0;
+			background-image: url(/wjst-default/img/icons/plane.svg);
+			width: 42px;
+			height: 42px;
+			top: 30px;
+		}
+		&::after{
+			content: "";
+			position: absolute;
+			right: 0;
+			background-image: url(/wjst-default/img/icons/plane.svg);
+			width: 42px;
+			height: 42px;
+			top: 30px;
+		}
+	}
+	&__description{
+		font-size: 24px;
+		font-weight: 600;
+		line-height: 34px;
+		padding-top: 35px;
+		text-align: center;
+	}
+	&-triggers{
+		display: flex;
+		flex-flow: row wrap;
+		max-width: 1070px;
+		margin: 0 auto;
+		padding: 55px 0 65px 0;
+		&__wrap{
+			flex: 0 0 33.333%;
+			max-width: 33.333%;
+			padding: 0 15px;
+			display: flex;
+		}
+		&__item{
+			background-color: #00000098;
+			padding: 20px;
+			border-radius: 20px;
+			backdrop-filter: blur(5px);
+		}
+		&__img{
+			text-align: center;
+		}
+		&__title{
+			padding: 10px 0 7px 0;
+			font-weight: 900;
+			font-size: 20px;
+			text-align: center;
+		}
+		&__description{
+			font-size: 16px;
+			font-weight: 500;
+			line-height: 24px;
+			text-align: center;
+		}
+	}
+	&__btn{
+		padding-bottom: 100px;
+		a{
+			margin: 0 auto;
+			
+		}
 	}
 }
