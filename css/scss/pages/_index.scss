@@ -697,7 +697,7 @@ table {
 	}
 }*/
 
-
+// welcome
 .welcome{
 	padding-top: 150px;
 	&__main-title{
@@ -778,5 +778,66 @@ table {
 			margin: 0 auto;
 			
 		}
+	}
+}
+
+//trip
+.trip{
+	&__main-title{
+		padding-top: 50px;
+	}
+	&-list{
+		display: flex;
+		flex-flow: row wrap;
+	}
+	&__wrap{
+		max-width: 50%;
+		flex: 0 0 50%;
+		display: flex;
+		padding: 0 15px;
+		margin-bottom: 40px;
+	}
+	&__item{
+		display: flex;
+		flex-flow: column wrap;
+	}
+	&__img{
+		img{
+			border-radius: 13px;
+		}
+	}
+	&-title{
+		display: flex;
+		align-items: center;
+		font-size: 22px;
+		font-weight: 900;
+		padding: 20px 0 15px 0;
+		&__img{
+			margin-right: 10px;
+		}
+	}
+	&__description{
+		font-size: 18px;
+		font-weight: 500;
+		line-height: 30px;
+	}
+	&-triggers{
+		display: flex;
+		flex-flow: row wrap;
+		padding-top: 10px;
+		&__item{
+			flex: 0 0 50%;
+			max-width: 50%;
+			display: flex;
+			align-items: center;
+			margin-bottom: 5px;
+		}
+		&__img{
+			margin-right: 10px;
+		}
+	}
+	&__btn{
+		margin-top: auto;
+    	padding-top: 20px;
 	}
 }

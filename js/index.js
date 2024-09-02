@@ -34,3 +34,14 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+document.addEventListener('scroll', function() {
+    const header = document.querySelector('.header');
+    const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+  
+    if (scrollPosition > 0) {
+      header.style.background = '#000000a6';
+      header.style.backdropFilter = 'blur(5px)';
+    } else {
+      header.style.background = 'transparent';
+    }
+  });

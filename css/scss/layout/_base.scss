@@ -71,11 +71,26 @@ ul {
 .first-section{
 	background: url('/wjst-default/img/welcome.png');
 }
-
+.global-title{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 70px;
+	&__img{
+		margin-right: 20px;
+		align-items: center;
+	}
+	&__text{
+		font-size: 48px;
+		font-weight: 800;
+	}
+}
 .header{
 	padding: 10px;
 	position: fixed;
 	width: 100%;
+	z-index: 1000;
+	transition: background 0.3s ease;
 	&-wrap{
 		display: flex;
 		align-items: center;
