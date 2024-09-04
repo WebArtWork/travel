@@ -841,3 +841,211 @@ table {
     	padding-top: 20px;
 	}
 }
+
+//travel
+
+.how-travel{
+	&-list{
+		max-width: 1000px;
+		margin: 0 auto;
+	}
+	&__wrap{
+		display: flex;
+		flex-flow: row wrap;
+		padding: 0 0 85px 0;
+		&:last-child{
+			padding: 0 0 0 0;
+		}
+		&:nth-child(odd) {
+			.how-travel-img{
+				order: 1;
+			}
+			.how-travel-text{
+				order: 0;
+				padding: 0 45px 0 0;
+			}
+		}
+	}
+	&-img{
+		flex: 0 0 375px;
+		img{
+			border-radius: 12px;
+		}
+	}
+	&-text{
+		flex: 1 0;
+		padding-left: 45px;
+		&__title{
+			font-size: 22px;
+			font-weight: 900;
+			color: #D4E22D;
+			padding-bottom: 10px;
+		}
+		&__description{
+			font-size: 16px;
+			font-weight: 500;
+			line-height: 24px;
+		}
+		&-triggers{
+			padding-top: 15px;
+			&__item{
+				display: flex;
+				align-items: center;
+				margin-bottom: 10px;
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
+			&__img{
+				display: flex;
+				margin-right: 10px;
+			}
+			&__text{
+				font-weight: 800;
+				font-size: 15px;
+			}
+		}
+	}
+	&__btn{
+		.btn-t{
+			margin: 55px auto 0;
+		}
+	}
+}
+
+//drivers
+
+.drivers{
+	background: url('/wjst-default/img/cars.png');
+	padding: 130px 0;
+	&-list{
+		display: flex;
+		flex-flow: row wrap;
+	}
+	&__wrap{
+		flex: 0 0 33.333%;
+		max-width: 33.333%;
+		display: flex;
+		padding: 0 15px;
+	}
+	&__item{
+		padding: 18px;
+		background-color: rgba(0, 0, 0, .5960784314);
+		border-radius: 20px;
+		backdrop-filter: blur(5px);
+		display: flex;
+		flex-flow: column wrap;
+		width: 100%;
+	}
+	&-title{
+		display: flex;
+		align-items: center;
+		padding-top: 10px;
+		&__img{
+			margin-right: 10px;
+		}
+		&__title{
+			font-size: 20px;
+			font-weight: 900;
+		}
+	}
+	&__description{
+		font-size: 18px;
+		font-weight: 500;
+		line-height: 24px;
+		padding: 12px 0;
+	}
+	&-triggers{
+		margin-top: auto;
+		&__item{
+			display: flex;
+			align-items: center;
+			margin-bottom: 5px;
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+		&__img{
+			display: flex;
+		}
+		&__text{
+			margin-left:10px;
+			font-size: 15px;
+			font-weight: 700;
+			span{
+				color: #D4E22D;
+			}
+		}
+	}
+}
+
+//about
+
+.about{
+	&-wrap{
+		display: flex;
+		flex-flow: row wrap;
+	}
+	&-img{
+		flex: 0 0 650px;
+	}
+	&-text{
+		flex: 1 0;
+		padding-left: 50px;
+		&__title{
+			font-size: 26px;
+			color: #D4E22D;
+			font-weight: 900;
+			padding-bottom: 15px;
+		}
+		&__description{
+			font-size: 18px;
+			p{
+				padding-bottom: 10px;
+				&:last-child{
+					padding-bottom: 0;
+				}
+			}
+		}
+		&-triggers{
+			padding: 20px 0;
+		}
+	}
+}
+
+//advan
+
+.advantages{
+	background: url(/wjst-default/img/advan.png);
+    padding: 130px 0;
+	&-wrap{
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+	}
+	&__wrap{
+		flex: 0 0 25%;
+		max-width: 25%;
+		padding: 0 15px;
+		display: flex;
+		margin-bottom: 50px;
+	}
+	&__item{
+		background-color: rgba(0, 0, 0, 0.5960784314);
+		padding: 20px 12PX;
+		border-radius: 20px;
+		backdrop-filter: blur(5px);
+		text-align: center;
+	}
+	&__img{
+		min-height: 87px;
+	}
+	&__title{
+		font-weight: 900;
+		font-size: 20px;
+		padding-bottom: 10P;
+	}
+	&__description{
+		font-size: 16px;
+	}
+}
