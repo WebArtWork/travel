@@ -45,3 +45,8 @@ document.addEventListener('scroll', function() {
       header.style.background = 'transparent';
     }
   });
+
+  document.querySelector(".burger-wrap").addEventListener("click", function () {
+    document.querySelector(".header-navigation").classList.toggle("header-navigation--open");
+    document.querySelector(".burger").classList.toggle("burger--close");
+});
