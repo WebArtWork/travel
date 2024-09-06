@@ -66,7 +66,7 @@ $red-darken: #581010;
 
 //header
 .header {
-	padding: 10px;
+	padding: 10px 0;
 	position: fixed;
 	width: 100%;
 	z-index: 1000;
@@ -680,7 +680,7 @@ $red-darken: #581010;
 		align-items: center;
 		position: absolute;
 		z-index: 3;
-		transform: translate(50%, -50%);
+		transform: translate(-50%, -50%);
 		left: 50%;
 		top: 50%;
 	}
@@ -819,5 +819,165 @@ $red-darken: #581010;
 		display: flex;
 		align-items: center;
 		margin: 0 20px 0 0;
+	}
+}
+@media screen and (max-width: 767px) {
+	.header-logo{
+		width: 150px;
+	}
+	.header-medias a{
+		margin-right: 20px;
+	}
+	.welcome__main-title {
+        font-size: 38px;
+    }
+	.welcome__main-title::before, .welcome__main-title::after {
+        top: 10px;
+        width: 24px;
+        height: 24px;
+        background-size: cover;
+    }
+	.welcome__description {
+        font-size: 18px;
+        line-height: 26px;
+    }
+	.welcome-triggers{
+		justify-content: center;
+		&__wrap{
+			flex: 0 0 50%;	
+			max-width: 50%;
+			padding: 0 5px;	
+			margin-bottom: 10px;
+		}
+	}
+	.global-title__text {
+        font-size: 26px;
+    }
+	.trip__wrap {
+		max-width: 100%;
+		flex: 0 0 100%;
+	}
+	.how-travel-text {
+		padding: 15px 0 0 0;
+	}
+	.how-travel__wrap:nth-child(odd) .how-travel-img {
+		order: 0;
+	}
+	.how-travel__wrap:nth-child(odd) .how-travel-text {
+		order: 0;
+		padding: 15px 0 0 0;
+	}
+	.drivers__wrap {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+	.drivers .trip__main-title{
+		padding-top: 0;
+	}
+	.about-text {
+		flex: 1 0;
+		padding: 15px 0 0 0;
+	}
+	.about-img {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+	.advantages__wrap {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding: 0 7px;
+        margin-bottom: 14px;
+    }
+	.footer__social{
+		span{
+			display: none;
+		}
+	}
+}
+
+@media screen and (max-width: 479px) {
+    .burger-wrap {
+        transform: translate(-50%, -50%);
+        left: unset;
+        top: 50%;
+        right: 10px;
+    }
+	.welcome-triggers__wrap {
+        flex: 0 0 50%;
+        max-width: 50%;
+	}
+	.welcome__main-title {
+        font-size: 28px;
+    }
+	.welcome__main-title::before, .welcome__main-title::after {
+        top: 7px;
+        width: 18px;
+        height: 18px;
+        background-size: cover;
+    }
+	.welcome__description {
+        font-size: 17px;
+        line-height: 24px;
+    }
+	.welcome-triggers__wrap {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+	.trip__wrap {
+        max-width: 380px;
+        flex: 0 0 100%;
+        padding: 0;
+    }
+	.global-title__img{
+		width: 40px;
+	}
+	.global-title__text {
+        font-size: 20px;
+    }
+	.trip__main-title {
+		padding-top: 50px;
+	}
+	.global-title {
+		margin-bottom: 40px;
+	}
+	.btn-t {
+		max-width: 270px;
+		height: 55px;
+		font-size: 18px;
+		.btn-t img {
+			z-index: 1;
+			width: 30px;
+			height: 30px;
+		}
+	}
+	.how-travel-img {
+		flex: 0 0 100%;
+		max-width: 380px;
+	}
+	.drivers__wrap {
+        max-width: 380px;
+        padding: 0;
+    }
+	.advantages__wrap {
+        flex: 0 0 100%;
+        max-width: 380px;
+        margin-bottom: 25px;
+        padding: 0;
+    }
+	.footer__wrap--second {
+        padding: 20px;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+	.footer__item-link-wrap {
+		margin-bottom: 20px;
+	}
+	.footer__social img {
+		margin-right: 0;
+	}
+	.footer__social:last-child {
+		margin: 0;
 	}
 }
