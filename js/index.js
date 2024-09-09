@@ -80,3 +80,35 @@ document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener('resize', moveHeaderMedias);
   });
   
+
+  document.addEventListener("DOMContentLoaded", function () {
+  var customSelect = document.getElementById("customSelect");
+  var selected = customSelect.querySelector(".select-selected");
+  var items = customSelect.querySelector(".select-items");
+  var options = items.querySelectorAll("div");
+
+  selected.addEventListener("click", function () {
+      items.classList.toggle("select-open");
+      selected.classList.toggle("select-open");
+  });
+
+  options.forEach(option => {
+      option.addEventListener("click", function () {
+      var selectedValue = this.getAttribute("data-value");
+      selected.innerHTML = this.innerHTML + '<span class="arrow"></span>';
+      items.classList.remove("select-open");
+      selected.classList.remove("select-open");
+      options.forEach(opt => opt.classList.remove("same-as-selected"));
+      this.classList.add("same-as-selected");
+      // Додайте свою логіку обробки вибору
+      console.log("Selected value: " + selectedValue);
+      });
+  });
+
+  document.addEventListener("click", function (e) {
+      if (!customSelect.contains(e.target)) {
+      items.classList.remove("select-open");
+      selected.classList.remove("select-open");
+      }
+  });
+  });
