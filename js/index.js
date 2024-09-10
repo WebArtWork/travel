@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function() {
   options.forEach(option => {
       option.addEventListener("click", function () {
       var selectedValue = this.getAttribute("data-value");
-      selected.innerHTML = this.innerHTML + '<span class="arrow"></span>';
+      selected.querySelector(".select-title__title").innerHTML = this.innerHTML;
       items.classList.remove("select-open");
       selected.classList.remove("select-open");
       options.forEach(opt => opt.classList.remove("same-as-selected"));
@@ -112,3 +112,49 @@ document.addEventListener("DOMContentLoaded", function() {
       }
   });
   });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const items = document.querySelectorAll('.cities__item');
+    let selectedItem = null;
+  
+    function resetItems() {
+      items.forEach(item => {
+        item.classList.remove('selected');
+        item.style.opacity = '1'; // Reset opacity to default
+      });
+      selectedItem = null; // Clear selected item
+    }
+  
+    items.forEach(item => {
+      item.addEventListener('click', function (event) {
+        // Prevent event propagation to the document
+        event.stopPropagation();
+  
+        // Reset all items
+        resetItems();
+  
+        // Set this item as selected
+        this.classList.add('selected');
+        this.style.opacity = '1'; // Ensure the selected item is fully opaque
+  
+        // Set opacity for all other items
+        items.forEach(el => {
+          if (!el.classList.contains('selected')) {
+            el.style.opacity = '0.5'; // Reduce opacity for non-selected items
+          }
+        });
+  
+        // Track the selected item
+        selectedItem = this;
+      });
+    });
+  
+    // Handle clicks outside of the items
+    document.addEventListener('click', function () {
+      if (selectedItem) {
+        resetItems();
+        selectedItem = null;
+      }
+    });
+  });
+  

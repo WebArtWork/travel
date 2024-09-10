@@ -6,7 +6,7 @@
   .select-selected {
     background-color: #000;
     border-radius: 4px;
-    padding: 10px;
+    padding: 12px 20px;
     cursor: pointer;
     position: relative;
     transition: background-color 0.3s ease;
@@ -17,6 +17,7 @@
 
     .arrow {
       transition: transform 0.3s ease;
+      display: flex;
     }
 
     &.select-open .arrow {
