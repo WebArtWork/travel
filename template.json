@@ -4,7 +4,7 @@
 	"keywords": "waw, web art work, server render, template",
 	"prefix": "/wjst-default",
 	"favicon": "img/favicon.ico",
-	"image": "https://webartwork.github.io/img/avatar.png",
+	"image": "https://wjst-default.webart.work/img/avatar.png",
 	"author": "Honchar Denys",
 	"scss": "scss/index.scss"
 }
