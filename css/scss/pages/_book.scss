@@ -1,7 +1,5 @@
   .book{
-    height: 100vh;
-    display: flex;
-    align-items: center;
+    padding: 150px 0 100px 0;
     &-wrap{
         max-width: 550px;
         margin: 0 auto;
@@ -224,4 +222,66 @@
         }
       }
     }
+}
+
+//data
+
+.data{
+  &-wrapper{
+    
+  }
+  &__input{
+    width: 100%;
+    position: relative;
+    input{
+      border: none;
+      background: #000;
+      padding: 20px 20px 20px 60px;
+    }
+    &-img{
+      position: absolute;
+      top:50%;
+      transform: translateY(-50%);
+      left: 20px;
+    }
+  }
+}
+.user{
+  &-wrapper{
+    label{
+      margin-bottom: 10px;
+      display: block;
+      span{
+        display: block;
+        padding-bottom: 3px;
+      }
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__input{
+    width: 100%;
+    position: relative;
+    margin-bottom: 10px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+    input{
+      border: none;
+      background: #000;
+      padding: 20px 20px 20px 60px;
+    }
+    &-img{
+      position: absolute;
+      top:50%;
+      transform: translateY(-50%);
+      left: 20px;
+      display: flex;
+      svg{
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
 }
