@@ -493,6 +493,66 @@ $red-darken: #581010;
 	}
 }
 
+//feedback
+.slick-prev, .slick-next {
+	font-size: 0;
+	line-height: 0;
+	position: absolute;
+	top: 50%;
+	display: block;
+	width: 50px;
+	height: 50px;
+	&::before{
+		display: none;
+	}
+}
+.slick-prev {
+	left: -60px;
+	background-image: url('../img/icons/arrow.svg');
+}
+.slick-next {
+	right: -60px;
+	background-image: url('../img/icons/arrowr.svg');
+}
+.feedback{
+	padding: 0 0 70px 0;
+	&__item{
+		margin: 0 5px;
+	}
+	.slick-dots li button:before{
+		color: #d4e22d;
+		font-size: 15px;
+	}
+	.slick-dots{
+		bottom: -35px;
+	}
+	.drivers-triggers{
+		display: flex;
+		.drivers-triggers__item{
+			margin: 0 10px 0 0;
+			transition: all .3s;
+			svg{
+				cursor: pointer;
+				transition: all .3s;
+				&:hover{
+					fill:#D4E22D;
+				}
+				path{
+					transition: all .3s;
+				}
+			}
+		}
+	}
+	.drivers__img{
+		img{
+			width: 150px;
+			height: 150px;
+			object-fit: cover;
+			border-radius: 5px;
+		}
+	}
+}
+
 //advan
 
 .advantages {
@@ -636,6 +696,78 @@ $red-darken: #581010;
 	}
 }
 
+/*
+!--- DRIVER PAGE CSS ---!
+*/
+.drive{
+	padding: 150px 0 100px 0;
+	&-wrap{
+		display: flex;
+		flex-flow: row wrap;
+	}
+	&-slider{
+		max-width: 550px;
+		flex: 0 0 550px;
+		.slick-dots li button:before{
+			color: #d4e22d;
+			font-size: 15px;
+		}
+		.slick-dots{
+			bottom: -35px;
+		}
+	}
+	&-img{
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border-radius: 10px;
+		}
+	}
+	&-text{
+		flex: 1 0;
+		padding-left: 65px;
+		.drivers-triggers{
+			padding-top: 15px;
+		}
+		.drivers-triggers__img{
+			img{
+				width: 32px;
+				height: 32px;
+			}
+		}
+		.drivers-triggers__text{
+			font-size: 18px;
+		}
+		&-title{
+			display: flex;
+			align-items: center;
+			font-size: 23px;
+			text-transform: uppercase;
+			font-weight: 900;
+			margin-bottom: 20px;
+			&__img{
+				display: flex;
+				margin-right: 10px;
+				svg{
+					width: 32px;
+					height: 32px;
+				}
+			}
+		}
+		&__description{
+			font-size: 18px;
+			p{
+				margin-bottom: 10px;
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+
 @media screen and (max-width: 1400px) {
 	.welcome__main-title {
 		font-size: 60px;
@@ -738,6 +870,16 @@ $red-darken: #581010;
 	.about-img {
 		flex: 0 0 500px;
 	}
+	.drive-text {
+		padding-left: 45px;
+	}
+	.drive-slider {
+		max-width: 500px;
+		flex: 0 0 500px;
+	}
+	.drive-slider .slick-dots {
+		bottom: -15px;
+	}
 }
 @media screen and (max-width: 991px) {
 	.welcome__main-title {
@@ -820,6 +962,33 @@ $red-darken: #581010;
 		align-items: center;
 		margin: 0 20px 0 0;
 	}
+	.drive-slider {
+        max-width: 360px;
+        flex: 0 0 360px;
+		height: fit-content;
+    }
+	.drive-slider .slick-dots {
+        bottom: -35px;
+    }
+	.drive-text-title {
+		font-size: 18px;
+		font-weight: 900;
+		margin-bottom: 15px;
+	}
+	.drive-text-title__img svg {
+		width: 26px;
+		height: 26px;
+	}
+	.drive-text__description {
+		font-size: 16px;
+	}
+	.drive-text .drivers-triggers__img img {
+		width: 26px;
+		height: 26px;
+	}
+	.drive-text .drivers-triggers__text {
+		font-size: 15px;
+	}
 }
 @media screen and (max-width: 767px) {
 	.header-logo{
@@ -892,6 +1061,22 @@ $red-darken: #581010;
 		span{
 			display: none;
 		}
+	}
+	.drive-wrap {
+		display: flex;
+		flex-flow: column wrap;
+	}
+	.drive-slider {
+        max-width: 460px;
+        flex: 0 0 100%;
+        height: fit-content;
+		padding: 0 15px;
+    }
+	.drive-text {
+        padding: 30px 20px 0 0;
+    }
+	.drive {
+		padding: 110px 0 70px 0;
 	}
 }
 
@@ -980,4 +1165,10 @@ $red-darken: #581010;
 	.footer__social:last-child {
 		margin: 0;
 	}
+	.drive-slider {
+        max-width: 100%;
+        flex: 0 0 100%;
+        height: fit-content;
+        padding: 0 5px;
+    }
 }
